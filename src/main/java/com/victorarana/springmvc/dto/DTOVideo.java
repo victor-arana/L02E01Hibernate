@@ -1,10 +1,23 @@
 package com.victorarana.springmvc.dto;
 
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.Id;
+
+@Entity(name="video")
 public class DTOVideo {
 	
+	@Id
+	@Column(name="video_id")
 	private Integer videoId;
+	
+	@Column(name="titulo")
 	private String titulo;
+	
+	@Column(name="descripcion")
 	private String descripcion;
+	
+	@Column(name="url_video")
 	private String urlVideo;
 	
 	public Integer getVideoId() {
